@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-ow-electron-builder",
-  "version": "2.1.1",
+  "version": "0.0.1",
   "description": "vue-cli-plugin-electron-builder for ow-electron",
   "main": "index.js",
   "types": "index.d.ts",
