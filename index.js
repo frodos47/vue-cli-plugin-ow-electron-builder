@@ -550,10 +550,10 @@ module.exports = (api, options) => {
     async (args, rawArgs) => {
       // Use custom config for webpack
       process.env.IS_ELECTRON = true
-      const builder = require('ow-electron-builder')
+      const builder = require('@overwolf/ow-electron-builder')
       const yargs = require('yargs')
       // Import the yargs options from ow-electron-builder
-      const configureBuildCommand = require('ow-electron-builder/out/builder')
+      const configureBuildCommand = require('@overwolf/ow-electron-builder/out/builder')
         .configureBuildCommand
       // Prevent custom args from interfering with ow-electron-builder
       removeArg('--mode', 2, rawArgs)
@@ -975,7 +975,7 @@ module.exports = (api, options) => {
           if (process.platform === 'win32') stdioConfig.push('ipc')
 
           child = execa(
-            require('ow-electron'),
+            require('@overwolf/ow-electron'),
             [
               // Have it load the main process file built with webpack
               outputDir,
